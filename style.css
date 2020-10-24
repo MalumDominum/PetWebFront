@@ -149,6 +149,68 @@ a {
     box-shadow: inset 0 0 0 2px #fff;
     color: #fff;
 }
+/*================home-images=================*/
+.home-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.home-image {
+    background-size: cover;
+    padding: 130px 0px;
+    position: relative;
+    overflow: hidden;
+    background-position: center;
+}
+
+.home-image-title {
+    text-align: center;
+    transition-duration: 0.3s;
+}
+
+.home-image-hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.3s;
+}
+
+.home-image-hover-container {
+    width: max-content;
+    max-width: 100%;
+    text-align: center;
+}
+
+.home-image-hover-container-link {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.home-image-delim {
+    margin: 30px 0;
+}
+
+.home-image-delim::before, .home-image-delim::after {
+    content: "";
+    width: 60px;
+    height: 2px;
+    background-color: #222823;
+    display: inline-block;
+    margin: 0px 5px 4px 5px;
+}
+
+.home-image:hover .home-image-hover{
+    top: 0;
+    /*background-image: linear-gradient(90deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.2) 100%)*/
+}
+
+.home-image:hover .home-image-title{
+    transform: scale(0);
+}
 
 /*===================footer===================*/
 .hr {
@@ -223,6 +285,15 @@ a {
     .home-about .home-about-div {
         width: 100%;
         margin-bottom: 40px;
+    }
+    .home-images {
+        grid-template-columns: 1fr;
+    }
+    .home-image .home-image-hover{
+        top: 0;
+    }
+    .home-image .home-image-title{
+        transform: scale(0);
     }
     .footer-nav-col {
         width: 100%;
